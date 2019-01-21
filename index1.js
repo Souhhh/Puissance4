@@ -37,3 +37,5 @@ alert(repUser);
 
 
 // Troisième étape
+// Insertion du bouton 'Start Game' dans le index1.html
+
