@@ -1,41 +1,63 @@
-// Première étape finie
-
-let tableau = [
+// Première étape
+let startGame = ()=>{
+    let grid = [
     ['  ','  ','  ','  ','  ','  ','  '],
     ['  ','  ','  ','  ','  ','  ','  '],
     ['  ','  ','  ','  ','  ','  ','  '],
     ['  ','  ','  ','  ','  ','  ','  '],
     ['  ','  ','  ','  ','  ','  ','  '],
-    ['  ','  ','  ','  ','  ','  ','  '],
+    ['  ','  ','  ','  ','  ','  ','  ']
     ]
-    
-    // prompt(`
-    // | ${tab[0][0]} | ${tab[0][1]} | ${tab[0][2]} | ${tab[0][3]} | ${tab[0][4]} | ${tab[0][5]} | ${tab[0][6]} |
-    // | ${tab[1][0]} | ${tab[1][1]} | ${tab[1][2]} | ${tab[1][3]} | ${tab[1][4]} | ${tab[1][5]} | ${tab[1][6]} |
-    // | ${tab[2][0]} | ${tab[2][1]} | ${tab[2][2]} | ${tab[2][3]} | ${tab[2][4]} | ${tab[2][5]} | ${tab[2][6]} |
-    // | ${tab[3][0]} | ${tab[3][1]} | ${tab[3][2]} | ${tab[3][3]} | ${tab[3][4]} | ${tab[3][5]} | ${tab[3][6]} |
-    // | ${tab[4][0]} | ${tab[4][1]} | ${tab[4][2]} | ${tab[4][3]} | ${tab[4][4]} | ${tab[4][5]} | ${tab[4][6]} |
-    // | ${tab[5][0]} | ${tab[5][1]} | ${tab[5][2]} | ${tab[5][3]} | ${tab[5][4]} | ${tab[5][5]} | ${tab[5][6]} |
-    // `);
-    
+}
+
+let grid = [
+    ['  ','  ','  ','  ','  ','  ','  '],
+    ['  ','  ','  ','  ','  ','  ','  '],
+    ['  ','  ','  ','  ','  ','  ','  '],
+    ['  ','  ','  ','  ','  ','  ','  '],
+    ['  ','  ','  ','  ','  ','  ','  '],
+    ['  ','  ','  ','  ','  ','  ','  ']
+    ];
     
 // Deuxième étape
-const fonction = (tab)=>{
-    let repUser = prompt(`
-    | ${tab[0][0]} | ${tab[0][1]} | ${tab[0][2]} | ${tab[0][3]} | ${tab[0][4]} | ${tab[0][5]} | ${tab[0][6]} |
-    | ${tab[1][0]} | ${tab[1][1]} | ${tab[1][2]} | ${tab[1][3]} | ${tab[1][4]} | ${tab[1][5]} | ${tab[1][6]} |
-    | ${tab[2][0]} | ${tab[2][1]} | ${tab[2][2]} | ${tab[2][3]} | ${tab[2][4]} | ${tab[2][5]} | ${tab[2][6]} |
-    | ${tab[3][0]} | ${tab[3][1]} | ${tab[3][2]} | ${tab[3][3]} | ${tab[3][4]} | ${tab[3][5]} | ${tab[3][6]} |
-    | ${tab[4][0]} | ${tab[4][1]} | ${tab[4][2]} | ${tab[4][3]} | ${tab[4][4]} | ${tab[4][5]} | ${tab[4][6]} |
-    | ${tab[5][0]} | ${tab[5][1]} | ${tab[5][2]} | ${tab[5][3]} | ${tab[5][4]} | ${tab[5][5]} | ${tab[5][6]} |
-    `);
-    return repUser;
+const showGrid = (arr)=>{
+    let value = Number(prompt(`
+    | ${arr[1][0]} | ${arr[1][1]} | ${arr[1][2]} | ${arr[1][3]} | ${arr[1][4]} | ${arr[1][5]} | ${arr[1][6]} |
+    | ${arr[2][0]} | ${arr[2][1]} | ${arr[2][2]} | ${arr[2][3]} | ${arr[2][4]} | ${arr[2][5]} | ${arr[2][6]} |
+    | ${arr[0][0]} | ${arr[0][1]} | ${arr[0][2]} | ${arr[0][3]} | ${arr[0][4]} | ${arr[0][5]} | ${arr[0][6]} |
+    | ${arr[3][0]} | ${arr[3][1]} | ${arr[3][2]} | ${arr[3][3]} | ${arr[3][4]} | ${arr[3][5]} | ${arr[3][6]} |
+    | ${arr[4][0]} | ${arr[4][1]} | ${arr[4][2]} | ${arr[4][3]} | ${arr[4][4]} | ${arr[4][5]} | ${arr[4][6]} |
+    | ${arr[5][0]} | ${arr[5][1]} | ${arr[5][2]} | ${arr[5][3]} | ${arr[5][4]} | ${arr[5][5]} | ${arr[5][6]} |
+    `));
+    return value;
 }
-let test = fonction(tableau);
-alert(test);
-alert(repUser);
+// test = fonction(tableau);
+// alert(test);
+// alert(repUser);
+
+// Troisième étape (insertion du bouton 'Start Game' dans le index1.html)
 
 
-// Troisième étape
-// Insertion du bouton 'Start Game' dans le index1.html
+// Quatrième étape
+let fillCol = (playedValue,arr)=>{
+    let indexCol = playedValue - 1;
+    let indexRow = 5;
+    arr[indexRow][indexCol] = 'a';
+}
 
+// Tests
+let played = showGrid(grid);
+fillCol(played, grid);
+played = showGrid(grid);
+fillCol(played, grid);
+played = showGrid(grid);
+fillCol(played, grid);
+played = showGrid(grid);
+fillCol(played, grid);
+played = showGrid(grid);
+fillCol(played, grid);
+played = showGrid(grid);
+fillCol(played, grid);
+played = showGrid(grid);
+
+// Cinquième étape
